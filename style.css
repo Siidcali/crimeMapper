@@ -1,0 +1,142 @@
+kbody {
+     padding: 0;
+	margin: 0;
+	font-family: Helvetica, sans-serif;
+}
+html, body, #map {
+	height: 100%;
+	width: 100%;
+}
+.
+container{
+     max-width: 700px;
+     width: 500px;
+     background: #fff;
+     padding: 8px 15px;
+     border-radius: 3px;
+     position: absolute;
+     top: 10px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 500;
+	opacity: 0.9;
+}
+.container:hover{
+	opacity: 1;
+}
+.container .title{
+     font-size: 25px;
+     font-weight: 500;
+     position: relative;
+     text-align: center;
+     padding-bottom: 3px;
+}
+.container .title::before{
+     content: '';
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     height: 2px;
+     width: 500px;
+     background: linear-gradient(135deg,#2DA3A9, #21781C);
+}
+.container form .input-details{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     margin: 6px 15px 2px 0;
+}
+form .input-details .input-box{
+     width: calc(100% / 2 - 40px);
+     margin-bottom: 8px;		
+}
+.input-details .input-box input{
+     height: 25px;
+     width: 100%;
+     outline: none;
+     border-radius: 2px;
+     border: 1px solid #ccc;
+     padding-left: 8px;
+     font-size: 12px;
+}
+.input-details .input-box input[type = 'text']{
+     width: 120%;
+}
+.input-details .input-box .details{
+     display: block;
+     font-weight: 500;
+     margin-bottom: 3px;
+     padding-left: 1px;
+}
+form .button {
+     height: 100%;
+     margin: auto;
+}
+form .button input{
+   	padding: 3px;
+     height: 30px;
+     width: 20%;
+     outline: none;
+     color: #fff;
+     border: none;
+     font-size: 15px;
+     font-weight: 500;
+     border-radius: 3px;
+     letter-spacing: 1px;
+     background: linear-gradient(135deg, #2DA3A9, #21781C);
+}
+form .button input:hover{
+     background: linear-gradient(135deg, #21781C, #2DA3A9);
+}
+.wrapper{
+     display: flex;
+     position: absolute;
+     top: 40%;
+	left: 0;
+	z-index: 500;
+	opacity: 1;
+}
+.side-panel-toggle{
+     width: 35px;
+     height: 45px;
+     flex-shrink: 0;
+     display: grid;
+     place-items: center;
+
+     color: #fff;
+     background: linear-gradient(135deg,#2DA3A9, #21781C);
+     border: none;
+     border-radius: 0 3px 3px 0;
+     outline: none;
+     cursor: pointer; 
+}
+.side-panel-toggle:hover{
+     background: linear-gradient(135deg, #21781C, #2DA3A9);
+}
+.sp-icon-close{
+     display: none !important;
+}
+.side-panel{
+     display: none;
+	height: 300px;
+     width: 300px;
+     flex-shrink: 0;
+     padding: 20px;
+     color: black;
+     background: #fff;
+     box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.35)
+}
+.side-panel-open .side-panel{
+     display: initial;
+}
+.side-panel-open .sp-icon-open{
+     display: none !important;
+}
+.side-panel-open .sp-icon-close{
+     display: initial !important;
+}
+#chartContainer{
+     height: 280px;
+     width: 280px
+}

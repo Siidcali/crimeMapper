@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height= device-height">
+	<title>Crime Mapper</title>
+
+	<!-- import leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigicn=""></script>
+
+    <!-- import chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.0-alpha/Chart.js">
+	</script>
+
+	<!-- Import google fonts for arrows on graph panel -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+<body>
+	
+	<div id="map"></div>
+
+	<div class="container">
+		<div class="title"> Enter details</div>
+		<form action="#">
+			<div class="input-details">
+				<div class="input-box">
+					<span class="details">Coordinates</span>
+					<input id="coords" type="text" title="Click on map to fill it" required disabled>
+				</div>
+				<div class="input-box">
+					<span class="details">Date</span>
+					<input id="dateRange" type="month" required min="2020-02">
+				</div>tghth
+			</div>
+			<div class="button">
+				<input type="submit" value="Search" onclick="getData()">
+			</div>
+		</form>
+	</div>
+	
+	
+	<div class="wrapper">
+		
+		<div class="side-panel">
+			<div id="chartContainer">
+				<h3><span style="color: black">Search for dataset using the form to see corresponding graph.</span></h3>
+				
+			</div>
+		</div>
+		<button class="side-panel-toggle" type="button">
+			<span class="material-icons sp-icon-open" title="Display Graph">keyboard_double_arrow_right</span>
+			<span class="material-icons sp-icon-close">keyboard_double_arrow_left</span>
+		</button>
+	</div>
+
+
+<script type="text/javascript" src="index.js">
+	
+	
+</script>
+</body>
+</html>
